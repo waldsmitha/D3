@@ -140,8 +140,8 @@ async function drawLine() {
 
         toolTip
           .style("display", "block")
-          .style("top", yScale(yAccessor(stock)) + "px")
-          .style("left", xScale(xAccessor(stock)) + "px");
+          .style("top", yScale(yAccessor(stock)) * 0.9 + "px")
+          .style("left", xScale(xAccessor(stock)) * 0.9 + 20 + "px");
 
         const dateFormatter = d3.timeFormat("%B %-d, %Y");
 
