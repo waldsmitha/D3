@@ -3,28 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock Data</title>
+    <title>D3 Visualizations</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
-    <div id="chart">
-      <div class="symbol-select">
-        <h1>Symbol:</h1>
-        <select id="metric">
-          <option value="aapl" selected>AAPL</option>
-          <option value="acn">ACN</option>
-          <option value="ael">AEL</option>
-          <option value="afsi">AFSI</option>
-          <option value="gst">GST</option>
+    <header>
+      <h1>D3 Visualizations</h1>
+    </header>
+    <div class="flex-container">
+      <div id="chart-line">
+        <div class="symbol-select">
+          <h1>Symbol:</h1>
+          <select id="metric-line">
+            <option value="aapl" selected>AAPL</option>
+            <option value="acn">ACN</option>
+            <option value="ael">AEL</option>
+            <option value="afsi">AFSI</option>
+            <option value="gst">GST</option>
+          </select>
+        </div>
+        <div id="tooltip-line">
+          <div class="date"></div>
+          <div class="price"></div>
+        </div>
+      </div>
+
+      <div id="chart-histogram">
+        <h1>Occurences per 365 Days</h1>
+        <select id="metric-histogram">
+          <option value="humidity" selected>Humidity</option>
+          <option value="temperature">Temperature</option>
+          <option value="dewPoint">Dew Point</option>
+          <option value="windSpeed">Wind Speed</option>
+          <option value="cloudCover">Cloud Cover</option>
+          <option value="ozone">Ozone</option>
         </select>
       </div>
-      <div id="tooltip">
-        <div class="date"></div>
-        <div class="price"></div>
+
+      <div id="chart-scatter">
+        <div id="tooltip-scatter">
+          <div class="metric-date"></div>
+          <div class="metric-humidity">Humidity: <span></span></div>
+          <div class="metric-temp">Temperature: <span></span></div>
+        </div>
       </div>
+
+      <div id="chart-pie"></div>
     </div>
+
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app-line.js"></script>
+    <script src="app-histogram.js"></script>
+    <script src="app-scatter.js"></script>
+    <script src="app-pie.js"></script>
   </body>
 </html>
